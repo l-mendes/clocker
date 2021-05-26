@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 import { Agenda } from '../components';
 import { Login } from '../components';
-import firebase from '../config/firebase';
+import { firebaseClient } from '../config/firebase/client';
 
 export default function Home() {
   const [auth, setAuth] = useState({
@@ -13,7 +13,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged(user => {
+    firebaseClient.auth().onAuthStateChanged(user => {
       setAuth({
         loading: false,
         user
