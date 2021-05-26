@@ -1,7 +1,5 @@
-import { Agenda } from '../components';
-
 export default function Agenda() {
   return (
-    <Agenda />
+    <h1>Agenda</h1>
   )
 }
